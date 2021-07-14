@@ -1,2 +1,2 @@
 # tncparking
-Repo to host the built external site
+Repo to host the built external site.

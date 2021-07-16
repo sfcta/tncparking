@@ -387,17 +387,17 @@ hr.panel {
   color: #fff;
 }
 .ui.color8.button:hover {
-  background-color: rgb(209, 125, 158);
+  background-color: rgb(235, 121, 89);
   color: rgb(0,0,0); 
 }
 
 /* off-street, selected */
 .ui.color4.button {
-  background-color: rgb(219, 135, 168);
+  background-color: #ff8d6d;
   color: rgb(0,0,0);
 }
 .ui.color4.button:hover {
-  background-color: rgb(199, 115, 148);
+  background-color: rgb(235, 121, 89);
   color: rgb(0,0,0);
 }
 
@@ -408,7 +408,7 @@ hr.panel {
   margin-left: 0px;
 }
 .ui.color9.button:hover {
-  background-color: rgb(73, 140, 189);
+  background-color: rgb(53, 120, 169);
   color: rgb(0,0,0); 
   margin-left: 0px;
 }
@@ -518,5 +518,5 @@ span.onstreet-text {
 }
 
 span.offstreet-text {
-  color : rgb(219, 135, 168);
+  color : #ff8d6d;
 }

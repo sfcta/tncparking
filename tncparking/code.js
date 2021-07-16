@@ -64,8 +64,13 @@ var barData_hourly;
 
 let selectedGeo;
 
-let onstreet_color = 'rgb(36,125,189)' // old color: 'rgb(73,140,189)';
-let offstreet_color = 'rgb(219,114,156)' // old color: 'rgb(219,135,168)';
+// For circles
+let onstreet_color_circle = 'rgb(36,125,189)' // BLUE: 
+let offstreet_color_circle =  '#f5815b' // Orange: old color (Pink): 'rgb(219,114,156)'
+
+// For bars 
+let onstreet_color_bar = 'rgb(73, 140, 189)' // BLUE: 
+let offstreet_color_bar =  '#ff8d6d' // Orange: old color (Pink): 'rgb(219,114,156)'
 
 
 // FUNCTIONS-----------------------------------------------------------------
@@ -321,7 +326,7 @@ function buildBarChart(key) {
     .join("g")
     .attr("class", "layers")
     .attr("fill", layer => {
-      return (layer.key=='onstreet') ? onstreet_color : offstreet_color;
+      return (layer.key=='onstreet') ? onstreet_color_bar : offstreet_color_bar;
     })
     .selectAll("rect")
     .data(layer => layer)
@@ -373,9 +378,9 @@ function getLocationColor() {
   if ((app.isOnStreetActive) && (app.isOffStreetActive)) { // ALL
     return '#8d8d8d';
   } else if (app.isOnStreetActive) { // ON STREET
-    return onstreet_color;
+    return onstreet_color_bar;
   } else if (app.isOffStreetActive) { // OFF STREET
-    return offstreet_color;
+    return offstreet_color_bar;
   } else { // NOTHING
     return '#8d8d8d';
   }
@@ -414,9 +419,9 @@ function minsToHours(num) {
 
 function circleColor(feature) {
   if (feature['location_type'] == 'onstreet') {
-    return onstreet_color
+    return onstreet_color_circle
   } else {
-    return offstreet_color
+    return offstreet_color_circle
   }
 }
 
